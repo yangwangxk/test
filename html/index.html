@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统| 登陆</title>
+    <link href="../css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="../css/dailog.css" rel="stylesheet"/>
+    <style>
+        #toast-container {
+            top: 0;
+            position: fixed;
+            z-index: 999999
+        }
+
+        #switch-browser {
+            display: none;
+            position: fixed;
+            background: red;
+            color: white;
+            padding-top: 10px;
+            height: 10%;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        if (window.parent != window) window.parent.location.reload();
+    </script>
+</head>
+
+<body class="login-bg">
+<div id="switch-browser">
+    <p>检测到您正在使用较低版本的IE浏览器，为了保证系统的正常运行</p>
+    <p>建议您切换至Mozilla FireFox或者Google Chrome浏览器</p>
+</div>
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+   <!--<img class="login-icon" src="../images/login_icon.png"/>-->
+    <div class="white-bg login-contans" style="background: rgba(255,255,255,0.5);">
+       <h3 class="banner">唯变科技管理系统</h3>
+        <form class="m-t" role="form" style="width: 404px;">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="用户名" name="userName" tabindex="1">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="密 码" name="passWord" tabindex="2">
+            </div>
+            <button type="button" class="btn btn-success block full-width m-b" onclick="login()" id="loginButton"
+                    tabindex="3">登陆
+            </button>
+        </form>
+    </div>
+</div>
+<!-- Mainly scripts -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/sweetalert.js"></script>
+<script src="../js/toastr.min.js"></script>
+<script src="../js/jquery-2.1.1.js"></script>
+<script src="../js/bootstrap-notify.js"></script>
+<script src="../js/bootstrap-dailog.js"></script>
+<script type="text/javascript" src="../js/login/login.js"></script>
+
+<script type="text/javascript">
+    if (isIE()) {
+        document.getElementById("switch-browser").style.display="block";
+    }
+</script>
+</body>
+
+</html>

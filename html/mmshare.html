@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0001)http://zjh.345zjh.com:8998/alonepub/ljfkshare.html-->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    	function choose(){
+    		var browser={
+        ua:function(){
+          var u = navigator.userAgent;
+          return {         //移动终端浏览器版本信息
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            iOS: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weChat: u.indexOf('MicroMessenger') > -1//是否是微信
+          };
+        }()
+      }
+      var ua = browser.ua;
+
+		if (ua.iPhone) {
+			   window.location.href = "https://itunes.apple.com/cn/app/id1137826253?mt=8";		
+		}else if (ua.iPad) {
+			   window.location.href = "https://itunes.apple.com/cn/app/id1137826253?mt=8";
+		}else if (ua.android) {
+			   window.location.href = "http://a.vigame.cn/apk/167330_mmlxx.apk";
+		}
+	  	}
+    	
+    	function wxChoose(){
+    		var browser={
+        ua:function(){
+          var u = navigator.userAgent;
+          return {         //移动终端浏览器版本信息
+            trident: u.indexOf('Trident') > -1, //IE内核
+            presto: u.indexOf('Presto') > -1, //opera内核
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+            iOS: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+            weChat: u.indexOf('MicroMessenger') > -1//是否是微信
+          };
+        }()
+      }
+      var ua = browser.ua;
+        if(ua.weChat){
+        	if(ua.iOS){
+        		$("#f_download").show();
+        	}
+        }
+		if (ua.iPhone) {
+			   window.location.href = "https://itunes.apple.com/cn/app/id1137826253?mt=8";		
+		}else if (ua.iPad) {
+			   window.location.href = "https://itunes.apple.com/cn/app/id1137826253?mt=8";
+		}else if (ua.android) {
+			   window.location.href = "http://a.vigame.cn/apk/167330_mmlxx.apk";
+		}
+	  	}
+    </script>
+	<title>分享页面</title>
+<style type="text/css">
+	body,ul,li,img,p,span,div{
+		margin: 0;
+		padding:0;
+	}
+	body{
+		background: #000007;
+	}
+	ul,li,img{
+		width: 100%;
+	}
+	img{
+		margin-top: -5px;
+	}
+</style></head>
+
+<body onload="choose()">
+	<ul>
+		<div style="display:none" id="f_download"><img src="jiantou.jpg"></div>
+		<li><img src="mmshare1.jpg"></li>
+		<li><img src="mmshare2.jpg"></li>
+		<li><a href="#" onclick="wxChoose()"><img src="mmshare3.jpg"></a></li>
+		<li><img src="mmshare4.jpg"></li>
+		<li><img src="mmshare5.jpg"></li>
+	</ul>
+
+
+</body></html>
